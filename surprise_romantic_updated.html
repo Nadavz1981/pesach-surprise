@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ההפתעה שלך</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .message {
+      position: relative;
+      z-index: 1;
+      top: 5%;
+      padding: 30px;
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      animation: fadeInUp 2s ease-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #FFD700;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      margin-top: 20px;
+      background: gold;
+      color: black;
+      font-size: 18px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #e6c200;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div class="message">
+  <h1>חג שמח אהובתי 💖</h1>
+  <p>
+    בכל שנה מגיע חג החירות – אבל בשבילי, החירות האמיתית היא את.<br>
+    החירות לאהוב בלי גבולות, לצחוק בלי סיבה, לחלום איתך כל לילה ולקום לצידך כל בוקר.
+  </p>
+  <p>
+    בין כל הניקיונות, הקניות, ההכנות... אני עוצר רגע.<br>
+    רגע רק בשבילך.<br>
+    כדי להזכיר לך כמה את מדהימה, כמה אני רואה אותך, מעריך אותך, אוהב אותך – יום אחרי יום.
+  </p>
+  <p>
+    ולכבוד החג – מגיע לך משהו קצת אחר.<br>
+    אז ב־15.01.25 החלטתי בשקט להתחיל לחסוך...<br>
+    כל פעם סכום קטן, רק כדי שתהיה לך הפתעה.<br>
+    סכום שתוכלי להשתמש בו לכל מטרה שתרצי – פינוק, חופשה, משהו לבית או לעצמך.<br>
+    הכסף מחכה לך.<br>
+    ואם את תוהה איפה בדיוק...
+  </p>
+  <p>
+    אז ככה... 😏<br>
+    הכניסי את ידייך מתחת למכנסיי...<br>
+    (לא לא! זה לא מה שעבר לך בראש עכשיו 😂😂)<br>
+    אני מדבר כמובן על הארון – איפה שהמכנסיים שלי מקופלים.<br>
+    שם, בין הבגדים, מחכה לך החבילה הקטנה עם כל החום והאהבה שלי 💛
+  </p>
+  <p>
+    מזל שיש לנו חגים בשביל שנחגוג –<br>
+    אבל בנוסף אני חוגג אותך,<br>
+    את הלב שלך, החיוך שלך, הרוך שבך והכוח שיש בך.
+  </p>
+  <p>
+    חג פסח שמח אהובה שלי.<br>
+    אוהב אותך תמיד – בעלך המאוהב 💌
+  </p>
+  <button class="button" onclick="goBack()">חזור לדף הראשי</button>
+</div>
+<audio id="background-audio" autoplay loop>
+  <source src="ad_sof_haolam.mp3" type="audio/mpeg">
+  הדפדפן שלך אינו תומך בנגן אודיו.
+</audio>
+
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 120
+      },
+      "color": {
+        "value": ["#FFD700", "#FF69B4", "#00FFFF"]
+      },
+      "shape": {
+        "type": "star"
+      },
+      "opacity": {
+        "value": 0.8
+      },
+      "size": {
+        "value": 4
+      },
+      "line_linked": {
+        "enable": false
+      },
+      "move": {
+        "enable": true,
+        "speed": 5
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "repulse"
+        }
+      }
+    },
+    "retina_detect": true
+  });
+
+  function goBack() {
+    window.location.href = "index.html";
+  }
+</script>
+</body>
+</html>

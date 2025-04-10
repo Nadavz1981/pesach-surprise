@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff9e6;
+    direction: rtl;
+    text-align: center;
+    color: #222;
+  }
+  
+  .container {
+    max-width: 600px;
+    min-height: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    border-radius: 20px;
+    background-image: url("our-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* שכבת כהות */
+    border-radius: 20px;
+    z-index: 0;
+  }
+  
+  .container * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
+    color: gold;
+    margin-bottom: 30px;
+  }
+  
+  p {
+    font-size: 30px;
+    line-height: 3;
+  }
+  
+  .reveal-button {
+    margin-top: 30px;
+    background-color: gold;
+    color: black;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reveal-button:hover {
+    background-color: #e6c200;
+  }
+  
+
+.hidden {
+    display: none;
+    font-size: 18px;
+    margin-top: 30px;
+    color: #444;
+}
+
+.fade-in {
+    animation: fadeInUp 2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .floating-text {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    font-size: 38px;
+    color: #ffcccc;
+    text-shadow: 2px 2px 5px black;
+    animation: float 2s ease-in-out infinite alternate;
+    z-index: 2;
+  }
+  
+  @keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(20px); }
+  }
+  
+  
